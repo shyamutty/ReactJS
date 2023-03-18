@@ -13,3 +13,6 @@ export default function MyApp() {
     </div>
   );
 }
+
+//The information you pass down like this is called props. 
+//Now the MyApp component contains the count state and the handleClick event handler, and passes both of them down as props to each of the buttons.
