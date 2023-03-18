@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 export default function MyApp() {
   const [count, setCount] = useState(0);
 
@@ -13,6 +15,15 @@ export default function MyApp() {
     </div>
   );
 }
+
+function MyButton({ count, onClick }) {
+  return (
+    <button onClick={onClick}>
+      Clicked {count} times
+    </button>
+  );
+}
+
 
 //The information you pass down like this is called props. 
 //Now the MyApp component contains the count state and the handleClick event handler, and passes both of them down as props to each of the buttons.
