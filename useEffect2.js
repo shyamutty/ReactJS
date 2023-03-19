@@ -11,6 +11,12 @@ export default function App() {
     window.addEventListener("resize", handleResize);
   }, []);
 
+  //remove the handle resize event listener
+  return() => {
+    window.removeEventListener('resize', handleResize);
+    }
+  },[])
+  
   return (
     <>
       <div>{windowWidth}</div>
