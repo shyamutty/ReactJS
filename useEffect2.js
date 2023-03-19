@@ -11,7 +11,8 @@ export default function App() {
     window.addEventListener("resize", handleResize);
   }, []);
 
-  //remove the handle resize event listener
+  //remove the handle resize event listener, first return will be called, its called cleanup
+  //cleanup the event listener and unsubscribe, anytime the event listerer unmounts
   return() => {
     window.removeEventListener('resize', handleResize);
     }
